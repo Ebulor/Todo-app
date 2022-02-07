@@ -199,7 +199,10 @@ function filterTodos(e){
                 break;
             case "clear-complete":  
                 if(todo.classList.contains("completed")) {
-                    todo.remove();
+                   const todos = document.querySelectorAll(".completed")
+                    todos.forEach((todo)=>{
+                        todo.remove()
+                    })
                     itemsLeft();
                 } 
                 break;
